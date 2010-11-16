@@ -1,0 +1,15 @@
+<?php
+// $Id$
+
+/**
+ * @file
+ *
+ */
+
+function inc_localities_install() {
+  $theme_settings = theme_get_settings();
+  $theme_overrides = array(
+    'toggle_node_info_loc' => 0,
+  );
+  variable_set('theme_settings', array_merge($theme_settings, $theme_overrides));
+}
